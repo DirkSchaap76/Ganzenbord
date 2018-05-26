@@ -1,7 +1,7 @@
 package Ganzebord;
 
 public class Player {
-	//fields
+	// fields
 	private String playerName;
 
 	// getters and setters
@@ -11,6 +11,17 @@ public class Player {
 
 	public void setPlayerName(String playerName) {
 		this.playerName = playerName;
+	}
+
+	// constructor(s)
+
+	public Player() {
+		System.out.println("no name was entered.");
+	}
+
+	public Player(String nameIn) {
+		this.playerName = nameIn;
+		System.out.println("Playername is: " + nameIn);
 	}
 
 }

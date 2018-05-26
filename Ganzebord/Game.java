@@ -43,6 +43,24 @@ public class Game {
 
 	public static void main(String[] args) {
 
+		/*
+		 * (FG = Functional Goal) (TS = technical strategy)
+		 * 
+		 * FG -> create a player FG -> Give player a name
+		 * 
+		 * TS -> new Player(); TS -> constructor with string: name
+		 * 
+		 * 
+		 * FG -> throw >= 1 die TS -> create throwDice() in Dice class
+		 * 
+		 * 
+		 */
+
+		Player playerOne = new Player("Piet");
+		Dice dice = new Dice();
+		
+		System.out.println(dice.throwDice());
+
 	}
 
 }
