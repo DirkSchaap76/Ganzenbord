@@ -58,8 +58,7 @@ public class Game {
 
 		Player playerOne = new Player("Piet");
 		Dice dice = new Dice();
-		
-		System.out.println(dice.throwDice());
+		dice.throwDice();
 
 	}
 
