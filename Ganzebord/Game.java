@@ -44,14 +44,16 @@ public class Game {
 	public static void main(String[] args) {
 
 		/*
-		 * FG -> move the player on the board
+		 * FG -> 1 move the player on the board FG -> 2 manualy add Player Piet to any
+		 * index of board
 		 * 
-		 * TS -> Create movePlayer() in Class Board
+		 * 
+		 * TS -> 1 Create movePlayer() in Class Board TS -> 2 modify movePlayer()
 		 */
 
 		Player playerOne = new Player("Piet");
 		Board board = new Board();
-		board.movePlayer();
+		board.movePlayer(playerOne);
 		Dice dice = new Dice();
 		dice.throwDice();
 

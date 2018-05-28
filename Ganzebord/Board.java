@@ -9,7 +9,9 @@ public class Board {
 	// int[] board = new int[63];
 	Player[] board = new Player[63];
 
-	void movePlayer() {
+	void movePlayer(Player player) {
+		board[10] = player;
+		System.out.println("The following player is on the board: " + board[10].getPlayerName());
 		System.out.println("This method will move players on the board");
 	}
 
