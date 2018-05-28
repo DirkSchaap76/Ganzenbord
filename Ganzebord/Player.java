@@ -23,5 +23,4 @@ public class Player {
 		this.playerName = nameIn;
 		System.out.println("Playername is: " + nameIn);
 	}
-
 }
