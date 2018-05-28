@@ -6,8 +6,8 @@ public class Dice {
 
 	public void throwDice() {
 		Random random = new Random((6) + 1);
-		int dieOne = 1 + random.nextInt(6);
-		int dieTwo = 1 + random.nextInt(6);
+		int dieOne = random.nextInt((6) + 1);
+		int dieTwo = random.nextInt((6) + 1);
 		System.out.println("Dice 1: " + dieOne);
 		System.out.println("Dice 2: " + dieTwo);
 

@@ -1,5 +1,7 @@
 package Ganzebord;
 
+import java.util.Scanner;
+
 /*
  * Rules:
  * 
@@ -51,12 +53,39 @@ public class Game {
 		 * TS -> 1 Create movePlayer() in Class Board TS -> 2 modify movePlayer()
 		 */
 
-		Player playerOne = new Player("Piet");
-		Board board = new Board();
-		board.movePlayer(playerOne);
-		Dice dice = new Dice();
-		dice.throwDice();
+		/*
+		 * Player playerOne = new Player("Piet"); Board board = new Board();
+		 * board.movePlayer(playerOne); Dice dice = new Dice(); dice.throwDice();
+		 */
 
+		Game game = new Game();
+		game.testMenu();
+
+	}
+
+	void testMenu() {
+
+		System.out.println("Menu option 1: test code.");
+		System.out.println("Menu option q: end program.");
+		Scanner input = new Scanner(System.in);
+		while (true) {
+			String choice = input.nextLine();
+			switch (choice) {
+			case "1":
+				Dice dice = new Dice();
+				System.out.println("Let's roll some dice!");
+				dice.throwDice();
+				break;
+			case "q":
+				System.out.println("Program ended.");
+				System.exit(0);
+				break;
+			default:
+				break;
+
+			}
+			// input.close();
+		}
 	}
 
 }
