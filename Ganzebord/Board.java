@@ -11,10 +11,13 @@ public class Board {
 
 	void movePlayer(Player player, Dice dice) {
 		dice.throwDice();
+	    board[dice.throwDice()][0] = player; // this line works, it moves player to index[sum of dice roll]
+
+		// test prints
 		System.out.println("The dice have been cast.");
-		board[10][0] = player;
-		System.out.println("The following player is on the board: " + board[10][0].getPlayerName());
+		System.out.println("The following player is on the board: " + board[dice.throwDice()][0].getPlayerName()); // this line give a nullPointerException
 		System.out.println("This method will move players on the board");
+
 	}
 
 }
