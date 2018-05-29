@@ -5,20 +5,20 @@ import java.util.Scanner;
 /*
  * Rules:
  * 
- * number   name         			meaning
- * **************************************************
+ * number   name         					meaning
+ * **************************************************************************************************************
  *			Dutch/English
  *		---------------------	 
- * 6		brug/bridge	 				Player go to position 12
- * 19		herberg/Inn					Skip a turn
- * 31		put/the well				who falls in the well, stays in the well until:
+ * 6		brug/ bridge	 				Player go to position 12
+ * 19		herberg/ Inn					Skip a turn
+ * 31		put/ the well					who falls in the well, stays in the well until:
  * 																another player passes you by
  * 																Whoever arrives here continues his/her turn
  * 42		doolhof/ maze
- * 			doornstruik/thorn bush		Go back to 39
- * 52		gevangenis/prison			same as 31			
- * 58		dood/ dead(or death)		Go back to beginning of the board, and start over
- * 63		einde / the end				Who arrives here first wins the game! 
+ * 			doornstruik/thorn bush			Go back to 39
+ * 52		gevangenis/prison				same as 31			
+ * 58		dood/ dead(or death)			Go back to beginning of the board, and start over
+ * 63		einde / the end					Who arrives here first wins the game! 
  * 					(of finish)
  * 
  * 
@@ -45,19 +45,6 @@ public class Game {
 
 	public static void main(String[] args) {
 
-		/*
-		 * FG -> 1 move the player on the board FG -> 2 manualy add Player Piet to any
-		 * index of board
-		 * 
-		 * 
-		 * TS -> 1 Create movePlayer() in Class Board TS -> 2 modify movePlayer()
-		 */
-
-		/*
-		 * Player playerOne = new Player("Piet"); Board board = new Board();
-		 * board.movePlayer(playerOne); Dice dice = new Dice(); dice.throwDice();
-		 */
-
 		Game game = new Game();
 		game.testMenu();
 
@@ -65,7 +52,8 @@ public class Game {
 
 	void testMenu() {
 
-		System.out.println("Menu option 1: test code.");
+		System.out.println("Menu option 1: test throwDice().");
+		System.out.println("Menu option 2: test movePlayer()");
 		System.out.println("Menu option q: end program.");
 		Scanner input = new Scanner(System.in);
 		while (true) {
@@ -75,6 +63,12 @@ public class Game {
 				Dice dice = new Dice();
 				System.out.println("Let's roll some dice!");
 				dice.throwDice();
+				break;
+			case "2":
+				Board board = new Board();
+				Player playerOne = new Player("TestPiet");
+				Dice diceOne = new Dice();
+				board.movePlayer(playerOne, diceOne);
 				break;
 			case "q":
 				System.out.println("Program ended.");
