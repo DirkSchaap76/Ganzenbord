@@ -11,15 +11,29 @@ public class Board {
 
 	void movePlayer(Player player, Dice dice) {
 
-		// player position is changed on line ..
+		// player position is changed on line 18
 		// toDo: make change persistent:
 		// player position should be: position + diceRoll = playerPosistion
 
-		int newPlayerPosition = player.getPlayerPosition() + dice.throwDice();
-		player.setPlayerPosition(newPlayerPosition);
+		player.setPlayerPosition(dice.throwDice());
+		// setPlayerPosition() is now locked to throwDice(), this is not the desired
+		// outcome...
+		// desired outcome is: playerPosition = playerPosition + throwDice...
+		// problem: I don't know how to achieve this.
 		System.out.println("Player " + player.getPlayerName() + ".");
 		System.out.println("player position is: " + player.getPlayerPosition());
 
 	}
+
+	// future goal:
+
+	/*
+	 * if(playerPosition == someSpecialPosition) { 
+	 * 
+	 * 		do special stuff as explained by the rules; 
+	 * 
+	 * }
+	 * 
+	 */
 
 }

@@ -22,6 +22,7 @@ public class Player {
 
 	public void setPlayerPosition(int playerPosition) {
 		this.playerPosition = playerPosition;
+
 	}
 
 	// constructor(s)
