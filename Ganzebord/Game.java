@@ -55,9 +55,13 @@ public class Game {
 		System.out.println("Menu option 1: test throwDice().");
 		System.out.println("Menu option 2: test movePlayer()");
 		System.out.println("Menu option q: end program.");
+
 		Scanner input = new Scanner(System.in);
+
 		while (true) {
+
 			String choice = input.nextLine();
+
 			switch (choice) {
 			case "1":
 				Dice dice = new Dice();
@@ -80,6 +84,6 @@ public class Game {
 			}
 			// input.close();
 		}
-	}
+	} // end of test method
 
 }
